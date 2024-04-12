@@ -16,14 +16,11 @@ const pages = [
 		soonDate: "11 de abril · 21:30 (CET)",
 		target: "_blank",
 	},
-].map((page) => {
-	console.log(Astro.url.pathname, " url - page.href ", page.href)
-
-	return {
-		...page,
-		active: Astro.url.pathname === page.href,
-	}
-})
+].map((page) => ({
+	...page,
+	active: Astro.url.pathname === page.href,
+}))
+console.log(Astro.url, " astro.url ")
 ---
 
 <header class="mb-10 h-16 max-w-[100vw] lg:h-24">

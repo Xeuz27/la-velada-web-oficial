@@ -20,6 +20,7 @@ const pages = [
 	...page,
 	active: Astro.url.pathname === page.href,
 }))
+console.log(Astro.url.pathname)
 ---
 
 <header class="mb-10 h-16 max-w-[100vw] lg:h-24">
